@@ -13,7 +13,7 @@ const FlightsForm = ({ setFlightResults }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/flights', {
+            await axios.post('https://flight-price-api-bv1y.onrender.com', {
                 source,
                 destination,
                 date,
