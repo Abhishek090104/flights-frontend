@@ -13,14 +13,14 @@ const FlightsForm = ({ setFlightResults }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://flight-price-api-bv1y.onrender.com', {
+            await axios.post('https://flight-price-api-bv1y.onrender.com/api/flights', {
                 source,
                 destination,
                 date,
                 passengers,
             });
 
-            const response = await axios.get('https://flight-price-api-bv1y.onrender.com');
+            const response = await axios.get('https://flight-price-api-bv1y.onrender.com/api/price');
             setFlightResults(response.data);
             navigate('/results')
         } catch (error) {
