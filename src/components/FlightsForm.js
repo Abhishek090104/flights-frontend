@@ -20,7 +20,7 @@ const FlightsForm = ({ setFlightResults }) => {
                 passengers,
             });
 
-            const response = await axios.get('http://localhost:5000/api/prices');
+            const response = await axios.get('https://flight-price-api-bv1y.onrender.com');
             setFlightResults(response.data);
             navigate('/results')
         } catch (error) {
